@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  p #{title}
+  form(name="register", method="post", action="/register")
+        div.input
+            span.label Username
+            input(type="text", name="username")
+        div.input
+            span.label Password
+            input(type="password", name="password")
+        div.actions
+            input(type="submit", value="register")
+  a.btn(href="/list") List 
+  
+
+        
+

@@ -1,0 +1,13 @@
+db.col.find({"key":"value"})
+db.col.find({"key":{$lt:50}}) lte, gt, gte, ne
+
+find({$and:[{"key":"value"},{}]});
+"" $or""
+
+db.ol.update({'key':'value'}, {$set:{"key" : "value"}})
+
+	  save() where criteria is _id:value
+	  
+db.col.remove({'k':'v'});
+
+                        
