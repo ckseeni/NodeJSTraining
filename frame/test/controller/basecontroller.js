@@ -54,12 +54,25 @@ class basecontroller{
 
     listUser(req, res) {
 
-        serviceobj.listUser().then((db) => {
-            console.log(db);
+        serviceobj.listUser().then((result) => {
+            console.log("b");
+            var s = "";
+            for(var i=0;i<result.data.length;i++) {
+                var j = result.data[i];
+                s = s + "\n" +j.name;
+                //console.log(j.name);
+            }  
+            console.log("\na");
+            //debugger;
+            //var r = result;
+            
+            console.log(result);  
             //res.send(result);
-            res.send(db);
+            //res.render('index', {title: result[0].name});
+            //res.json(result);
+            res.send(s);
         }).catch((err) => {
-            console.log(err.stack);
+            //console.log(err.stack);
         });
         /*mongoClient.connect(url, function(err, db) {
             db.collection("users").find().toArray(function(err, result) {
@@ -69,7 +82,9 @@ class basecontroller{
                     res.send(result);    
                 }    
             });
-        });  */     
+        });  */
+        
+        //res.send(serviceobj.listUser());
     }
 }
 
