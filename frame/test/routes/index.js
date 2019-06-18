@@ -2,6 +2,18 @@ var express = require('express');
 var router = express.Router();
 var controller = require('../controller/basecontroller');
 var controllerobj = new controller();
+/*const SchemaValidator = require('../middlewares/SchemaValidator');
+
+const validateRequest = SchemaValidator(true);
+
+const genericHandler = (req, res, next) => {
+  res.json({
+    status: 'success',
+    data: req.body
+  });
+}
+
+router.post('/people', validateRequest, genericHandler);*/
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

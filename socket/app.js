@@ -22,31 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-/*app.post('/test', (req, res, next) => {
-  const Joi = require('@hapi/joi');
-  const data = req.body;
-  const schema = Joi.object().keys({
-    email : Joi.string().email().required(),
-    phone : Joi.string().regex(/^\d{3}-\d{3}-\d{4}$/).required(),
-  });
-  Joi.validate(data, schema, (err, value) => {
-    const id = Math.ceil(Math.random()*999999);
-    if(err) {
-      res.status(422).json({
-        status: 'error',
-        message: 'Invalid request data',
-        data : data
-      });
-    } else {
-      res.status(200).json({
-        status: 'success',
-        message: 'Valid data',
-      });
-    }
-  });
-});*/
-
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -62,7 +37,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
 
 module.exports = app;
