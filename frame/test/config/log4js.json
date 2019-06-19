@@ -1,0 +1,18 @@
+{
+    "appenders": [
+        {
+            "category": "console",
+            "type": "console",
+            "layout": {
+                "type": "pattern",
+                "pattern": "%d %p %c - %m"
+            }
+        },
+        { "category": "app", "type": "dateFile", "filename": "logs/", "pattern": "yyyy-MM-dd_app2.log", "alwaysIncludePattern": true, "compress": true }
+    ],
+    "levels": {
+        "[all]": "INFO",
+        "console": "INFO",
+        "app": "INFO"
+    }
+}

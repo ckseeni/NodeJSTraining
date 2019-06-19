@@ -17,6 +17,7 @@ router.post('/people', validateRequest, genericHandler);*/
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log("test");
   controllerobj.indexPage(res);
   //res.render('index', {title: 'Welcome to registration'});
 });
