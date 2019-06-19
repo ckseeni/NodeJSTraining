@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=node:* ./bin/www",
+    "start": "node --inspect-brk ./bin/www",
     "test": "mocha test/*.js --timeout 10000"
   },
   "dependencies": {
@@ -26,3 +26,12 @@
     "request": "^2.88.0"
   }
 }
+//steps to debug in chrome
+npm start //edited start
+open source code in chrome via about:inspect and insert breakpoints
+thats it
+
+//steps to debug in vs code
+npm start //edited start
+click debug menu start debug and add breakpoints
+thats it
