@@ -8,7 +8,7 @@
   "author": "Rajesh",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "log4js": "^1.1.1"
   }
 }
